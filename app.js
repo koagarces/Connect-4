@@ -1,8 +1,12 @@
-const slots = document.getElementById('grid');
+document.addEventListener('DOMContentLoaded', () => {
+    let slots = document.querySelectorAll('#grid div');
 
 
-slots.forEach(slot => {
 
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].onclick = () => {
+            alert(`this is ${[i]}`)
+        }
+    }
 
-});
-
+})
