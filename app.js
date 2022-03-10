@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < slots.length; i++) {
         slots[i].onclick = () => {
-
+            if (slots[i].classList.contains('bottom'))
+                return;
             if (playerTurn === 'Player 1') {
                 if (slots[i + 6].classList.contains('bottom')) {
                     slots[i].classList.add('bottom');
@@ -46,11 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         playerTurn = 'Player 1'
                         player.innerHTML = playerTurn;
                     }
-                } else if (slots[i].classList.contains('bottom player1')) {
-                    slots[i].classList.remove('player2');
-                }
-                else if (slots[i].classList.contains('bottom player2')) {
-                    slots[i].classList.remove('player1');
                 }
                 else
                     alert('no go');
