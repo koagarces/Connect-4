@@ -15,7 +15,9 @@ h1 {
 a {
     text-decoration: none;
     color: black;
+    font-weight: bolder;
     font-size: 40px;
+    font-family: 'Comfortaa', cursive;
     background-color: aliceblue;
     padding: 20px;
 
