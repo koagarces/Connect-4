@@ -1,5 +1,5 @@
 body{
-    background-color: tan;
+    background-color: rgba(73, 14, 209, 0.486);
 }
 
 h1 {
@@ -60,4 +60,8 @@ button{
     width: 200px;
     height: 50px;
     position: relative;
+}
+
+#victor{
+    text-align: center;
 }
