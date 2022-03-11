@@ -1,15 +1,15 @@
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let slots = document.querySelectorAll('#grid div');
     let player = document.getElementById('player');
     let playerTurn = 'Player 1';
-    let red = document.getElementsByClassName('player1');
-    let black = document.getElementsByClassName('player2')
+    let victor = document.getElementById('#victor');
 
-
-    const WinSlot = [
+    const winSlot = [
         [0, 1, 2, 3],
         [1, 2, 3, 4],
         [2, 3, 4, 5],
@@ -66,10 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
 
-
-
-
-
     for (let i = 0; i < slots.length; i++) {
         slots[i].onclick = () => {
             if (slots[i].classList.contains('bottom'))
@@ -82,25 +78,58 @@ document.addEventListener('DOMContentLoaded', () => {
                     player.innerHTML = playerTurn;
 
                 }
-            } else
-                if (playerTurn === 'Player 2') {
-                    if (slots[i + 6].classList.contains('bottom')) {
-                        slots[i].classList.add('bottom');
-                        slots[i].classList.add('player2');
-                        playerTurn = 'Player 1'
-                        player.innerHTML = playerTurn;
-                    }
+            } else if (playerTurn === 'Player 2') {
+                if (slots[i + 6].classList.contains('bottom')) {
+                    slots[i].classList.add('bottom');
+                    slots[i].classList.add('player2');
+                    playerTurn = 'Player 1'
+                    player.innerHTML = playerTurn;
                 }
-                else
-                    alert('no go');
+            }
+            checkWinner();
+        }
+
+    }
+
+
+
+    function checkWinner() {
+        for (let i = 0; i < winSlot.length; i++) {
+            const slot1 = slots[winSlot[i][0]]
+            const slot2 = slots[winSlot[i][1]]
+            const slot3 = slots[winSlot[i][2]]
+            const slot4 = slots[winSlot[i][3]]
+
+
+            if (
+                slot1.classList.contains('player1') &&
+                slot2.classList.contains('player1') &&
+                slot3.classList.contains('player1') &&
+                slot4.classList.contains('player1')
+            ) {
+                alert('player one wins')
+            } else
+
+                if (
+                    slot1.classList.contains('player2') &&
+                    slot2.classList.contains('player2') &&
+                    slot3.classList.contains('player2') &&
+                    slot4.classList.contains('player2')
+                ) {
+                    alert('player 2 wins')
+                }
 
 
 
         }
-
-
     }
+
+
+
     function rButton() {
         location.reload();
     }
+
 })
+
+
