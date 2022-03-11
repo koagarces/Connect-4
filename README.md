@@ -21,7 +21,7 @@
 
 ### [Trello Board](https://trello.com/b/flZ4d9qk)
 
-### [Surge Link](striped-name.surge.sh)
+### [Surge Link: striped-name.surge.sh](striped-name.surge.sh) 
 
 ## Credits
 
