@@ -1,6 +1,5 @@
 body{
     text-align: center;
-    margin-top: 300px;
     background: plum;
     height: 100vw;
 }
@@ -8,11 +7,18 @@ body{
 
 h1 {
     font-size: 80px;
+    margin-top: 200px;
 }
 
 a {
     text-decoration: none;
     color: black;
     font-size: 40px;
-   
+    background-color: aliceblue;
+    padding: 20px;
+
+    border-radius: 50%;
+    width: 180px;
+    height: 80px;
+
 }
