@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slot3.classList.contains('player1') &&
                 slot4.classList.contains('player1')
             ) {
-                victor.innerHTML = 'player one wins'
+                victor.innerHTML = 'Player one wins'
             } else
 
                 if (
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     slot3.classList.contains('player2') &&
                     slot4.classList.contains('player2')
                 ) {
-                    victor.innerHTML = 'player two wins'
+                    victor.innerHTML = 'Player two wins'
                 }
 
 
