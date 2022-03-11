@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let slots = document.querySelectorAll('#grid div');
     let player = document.getElementById('player');
     let playerTurn = 'Player 1';
-    let victor = document.getElementById('#victor');
+    let victor = document.getElementById('victor');
 
     const winSlot = [
         [0, 1, 2, 3],
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slot3.classList.contains('player1') &&
                 slot4.classList.contains('player1')
             ) {
-                alert('player one wins')
+                victor.innerHTML = 'player one wins'
             } else
 
                 if (
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     slot3.classList.contains('player2') &&
                     slot4.classList.contains('player2')
                 ) {
-                    alert('player 2 wins')
+                    victor.innerHTML = 'player two wins'
                 }
 
 
