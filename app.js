@@ -1,7 +1,3 @@
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
     let slots = document.querySelectorAll('#grid div');
@@ -91,8 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-
-
     function checkWinner() {
         for (let i = 0; i < winSlot.length; i++) {
             const slot1 = slots[winSlot[i][0]]
@@ -108,24 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 slot4.classList.contains('player1')
             ) {
                 victor.innerHTML = 'Player one wins'
-            } else
-
-                if (
-                    slot1.classList.contains('player2') &&
-                    slot2.classList.contains('player2') &&
-                    slot3.classList.contains('player2') &&
-                    slot4.classList.contains('player2')
-                ) {
-                    victor.innerHTML = 'Player two wins'
-                }
-
-
-
+            } else if (
+                slot1.classList.contains('player2') &&
+                slot2.classList.contains('player2') &&
+                slot3.classList.contains('player2') &&
+                slot4.classList.contains('player2')
+            ) {
+                victor.innerHTML = 'Player two wins'
+            }
         }
     }
-
-
-
     function rButton() {
         location.reload();
     }
