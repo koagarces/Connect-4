@@ -14,7 +14,7 @@
 
 ## **Getting Started**
 
-### This game will require a 5 x 7 grid for objects to be placed. There will be the 2 players that alternate turns. 
+### This game will require a 5 x 7 grid for objects to be placed. This is a 2 player game where each player places a coin in the slot on their turn. The first one to create to get 4 in a row wins.
 ***
 
 ## **Project Schedule**
